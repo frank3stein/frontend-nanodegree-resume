@@ -185,11 +185,30 @@ $(function() {
 	header = document.getElementById('header'),
 	currentScroll;
 
+	// https://developer.mozilla.org/en-US/docs/Web/Events/resize
+	window.addEventListener("resize", resizeThrottler, false);
+
+	var resizeTimeout;
+	function resizeThrottler() {
+	// ignore resize events as long as an actualResizeHandler execution is in the queue
+		if ( !resizeTimeout ) {
+			resizeTimeout = setTimeout(function() {
+				resizeTimeout = null;
+				actualResizeHandler();
+
+		 	// The actualResizeHandler will execute at a rate of 15fps
+		 	}, 66);
+		}
+	}
+
+function actualResizeHandler() {
+	// handle the resize event
+	navPosition = $('#header').outerHeight();
+}
+
   function navControl() {
-		var currentScroll = $(document).scrollTop();
-		console.log(navPosition);
-		console.log(currentScroll);
-    if (currentScroll >= navPosition) {
+		currentScroll = $(document).scrollTop();
+    if (currentScroll >= (navPosition)) {
       navBar.classList.add('fixed-nav');
       header.classList.add('expand-header');
     } else {

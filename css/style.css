@@ -8,13 +8,14 @@
   display: inline-block;
 }
 
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #main {
-
+  width: 100%;
 }
 
 #projects {
@@ -31,7 +32,7 @@ nav {
 .fixed-nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: inherit;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -62,6 +63,7 @@ nav {
 /*flex-projects has to be responsive for mobile, find the breakpoint*/
 @media screen and (max-width: 1000px) {
   .flex-projects {
+    width: 100%;
     min-width: 450px;
     padding: 0;
   }
@@ -69,7 +71,7 @@ nav {
 
 @media screen and (max-width: 510px) {
   .flex-projects {
-    width: 95%;
+    width: 100%;
     min-width: 320px;
   }
 }
@@ -83,7 +85,6 @@ nav {
 }
 
 h1 {
-
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
@@ -334,7 +335,7 @@ span {
   background: #222 url(../images/pattern.svg);
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 751px) {
   #skillsH3,
   #skills,
   .biopic {
