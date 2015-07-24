@@ -4,6 +4,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
 #top-contacts {
   display: inline-block;
 }
@@ -24,7 +29,6 @@ body {
 
 nav {
   background-color: rgba(0,0,0, 0.8);
-  width: 100%;
   color: white;
   padding: 0;
 }
@@ -211,6 +215,7 @@ overlaps with some of the content.*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: auto;
   justify-content: space-around;
   padding: 10px;
 }
@@ -221,7 +226,7 @@ overlaps with some of the content.*/
 
 ul {
   list-style-type: none;
-  width: 100%;
+  width: 100vw;
 }
 
 nav.flex-box {
