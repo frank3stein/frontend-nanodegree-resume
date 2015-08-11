@@ -30,7 +30,7 @@ var projects = {
 		{
 			"title":"Udacity Portfolio Page",
 			"dates":"2014",
-			"description":"Portfolio Project",
+			"description":"My hello world. Used Bootstrap to create a responsive portfolio page example.",
 			"image":"images/project1-full.jpg",
 			"url":"http://frank3stein.github.io/index.html",
 			"repo":"https://github.com/frank3stein/frank3stein.github.io"
@@ -70,7 +70,7 @@ var projects = {
 		{
 			"title":"Feedreader Testing",
 			"dates":"2015",
-			"description":"In this project I used Yelp API, Google Maps API, Google StreetView API and Wikipedia API in order to create a map of Sydney where users can look at the first 20 Sushi Restaurants around the city.",
+			"description":"In this project I used Jasmine to create some tests in order to check if the functionality of feedreader website worked as intended.",
 			"image":"images/UdacityFeeds_Jasmine.jpg",
 			"url":"http://frank3stein.github.io/frontend-nanodegree-feedreader/",
 			"repo":"https://github.com/frank3stein/frontend-nanodegree-feedreader"
