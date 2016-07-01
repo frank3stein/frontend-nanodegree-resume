@@ -217,6 +217,7 @@ overlaps with some of the content.*/
   flex-wrap: wrap;
   width: auto;
   justify-content: space-around;
+  align-items: center;
   padding: 10px;
 }
 

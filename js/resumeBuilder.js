@@ -220,14 +220,15 @@ function actualResizeHandler() {
   $(window).scroll(navControl);
 });
 
+// On click go the relevant menu item.
 $('a[href^="#"]').on('click', function(event) {
 		var target = $(this.href);
-		var navHeight = $('#navBar').height();
+		var navHeight = $('#navBar').outerHeight();
 		console.log(target);
 		if( target.length ) {
 				event.preventDefault();
 				$('html, body').animate({
-						scrollTop: target.offset().top
+						scrollTop: target.offset().top + navHeight
 				}, 3000);
 		}
 });
