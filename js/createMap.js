@@ -103,4 +103,7 @@ export default function createMap(){
         pinPoster(locations);
           // Sets the boundaries of the map based on pin locations
         window.mapBounds = new google.maps.LatLngBounds();
+        window.addEventListener('resize', function(e) {
+          map.fitBounds(mapBounds);
+        });
 }
