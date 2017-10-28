@@ -103,7 +103,58 @@ export default function createMap(){
         pinPoster(locations);
           // Sets the boundaries of the map based on pin locations
         window.mapBounds = new google.maps.LatLngBounds();
-        window.addEventListener('resize', function(e) {
-          map.fitBounds(mapBounds);
-        });
+        var optimizedResize = (function() {
+          
+              var callbacks = [],
+                  running = false;
+          
+              // fired on resize event
+              function resize() {
+          
+                  if (!running) {
+                      running = true;
+          
+                      if (window.requestAnimationFrame) {
+                          window.requestAnimationFrame(runCallbacks);
+                      } else {
+                          setTimeout(runCallbacks, 66);
+                      }
+                  }
+          
+              }
+          
+              // run the actual callbacks
+              function runCallbacks() {
+          
+                  callbacks.forEach(function(callback) {
+                      callback();
+                  });
+          
+                  running = false;
+              }
+          
+              // adds callback to loop
+              function addCallback(callback) {
+          
+                  if (callback) {
+                      callbacks.push(callback);
+                  }
+          
+              }
+          
+              return {
+                  // public method to add additional callback
+                  add: function(callback) {
+                      if (!callbacks.length) {
+                          window.addEventListener('resize', resize);
+                      }
+                      addCallback(callback);
+                  }
+              }
+          }());
+          
+          // start process
+          optimizedResize.add(function() {
+            map.fitBounds(mapBounds);
+          });
 }
