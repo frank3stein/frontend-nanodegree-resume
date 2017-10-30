@@ -1,4 +1,4 @@
-import Profile from '../one'
+import Profile from './one';
 export default function createMap(){
     let map, 
         service, 

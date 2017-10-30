@@ -36,7 +36,7 @@ nav {
 .fixed-nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  /* width: 100%; */
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -57,11 +57,12 @@ nav {
 .project-entry {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .flex-projects {
   margin:10px;
-  // padding: 10px 5% 0 0;
+  padding: 10px 5% 0 0;
   width: 40%;
   min-width: 450px;
   border-style:outset;
@@ -219,7 +220,7 @@ overlaps with some of the content.*/
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .center-content {
@@ -232,7 +233,7 @@ ul {
 }
 
 nav.flex-box {
-  padding: 5px;
+  padding: 5px 0 5px 0;
 }
 
 nav>ul {

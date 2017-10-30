@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Profile from '../one.json';
+import Profile from './one.json';
 import Header from './header';
 import Navbar from './navBar';
 import Work from './workExperience';
@@ -10,6 +10,7 @@ import Map from './mapDiv';
 import CreateMap from './createMap';
 import LetsConnect from './letsConnect';
 import Contacts from './contacts';
+import '../css/style.css';
 
 function App(){
     return(
