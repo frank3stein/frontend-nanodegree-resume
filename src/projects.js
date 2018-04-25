@@ -19,7 +19,6 @@ class Projects extends React.Component{
                     <a href={project.url} target='_blank'>{project.title}</a>
                         <p><br/>{project.description}<a className='github-icon' href={project.repo} target='_blank'>Github Repo<img className='github-icon' src={svg}/></a></p>
                         <a href={project.url} target='_blank'><img src={projectPics[i]}/></a>
-                        {/* <a href={project.url} target='_blank'><img src={project.img}/></a> */}
                 </div>
             )
         )

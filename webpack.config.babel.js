@@ -68,14 +68,18 @@ module.exports = {
           title: 'Development',
           template: './src/index.html' // Normally creates a generic HTML for js file. But with template we can feed in our own HTML.
         }),
-        // new HtmlWebpackExternalsPlugin({
-        //   externals: [
-        //     {
-        //       module:'jquery', //Example for CDN
-        //       entry: 'https://unpkg.com/jquery@3.2.1/dist/jquery.min.js',
-        //       // global:'jQuery'  //if you want to setup a global
-        //     }
-        //   ]
-        // })
+        new HtmlWebpackExternalsPlugin({
+          externals: [
+            {
+              module:'google-map', //Example for CDN
+              entry: {
+                  path: 'https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAbnCoLwjzrj7G5TTcnoK8xLgVlYl2Y_p0',
+                  type: 'js'
+                },
+              
+              global:'google'  //if you want to setup a global
+            }
+          ]
+        })
     ]
 }

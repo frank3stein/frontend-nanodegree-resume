@@ -6,7 +6,7 @@ class Skills extends React.Component{
     }
     render(){
         return (this.props.skills.map(skill=>
-                <li className='flex-item'><span className='white-text'>{skill}</span></li>
+                <li key={skill} className='flex-item'><span className='white-text'>{skill}</span></li>
             )
         )
     }

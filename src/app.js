@@ -11,6 +11,7 @@ import CreateMap from './createMap';
 import LetsConnect from './letsConnect';
 import Contacts from './contacts';
 import './css/style.css';
+import createMap from './createMap';
 
 function App(){
     return(
@@ -37,4 +38,4 @@ render(
         document.getElementById('main')
 );
 
-CreateMap();
+window.onload = createMap;

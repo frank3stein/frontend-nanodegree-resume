@@ -7,7 +7,7 @@ class Education extends React.Component {
     render(){
         return (
                 this.props.schools.map(school =>
-                <div>
+                <div key = {school.major}>
                     <a href={school.url} target='_blank'>{school.name}</a>
                     <div className='date-text'>{school.dates}</div>
                     <div className='location-text'>{school.location}</div>

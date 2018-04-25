@@ -8,9 +8,9 @@ class LetsConnect extends React.Component{
     render(){
         return(
                 
-        <div id="letsConnect" class='dark-gray'>
-            <h2 class='purple center-text'>Let's Connect</h2>
-            <ul id="footerContacts" class="flex-box">
+        <div id="letsConnect" className='dark-gray'>
+            <h2 className='purple center-text'>Let's Connect</h2>
+            <ul id="footerContacts" className="flex-box">
                 <Contacts contacts={this.props.contacts}/>
             </ul>
         </div>

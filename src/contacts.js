@@ -6,7 +6,7 @@ class Contacts extends React.Component {
     }
     render(){
        return this.props.contacts.map((contact)=>
-                <li className='flex-item'>
+                <li key = {Object.keys(contact)} className='flex-item'>
                         <span className='orange-text'>{Object.keys(contact)}</span>
                         <span className='white-text'>{contact[Object.keys(contact)]}</span>
                 </li>
