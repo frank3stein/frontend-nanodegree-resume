@@ -40,6 +40,6 @@
     "prebuild": "rm -rf dist",
     "//": "When npm runs a script build, it first checks if there is a script prebuild. If there is, first it runs that.",
     "start": "webpack-dev-server --mode=development --config webpack.config.babel.js --open \"Google Chrome Canary\"",
-    "prod": "webpack --mode=production"
+    "prod": "webpack --mode=production --config webpack.config.babel.js"
   }
 }

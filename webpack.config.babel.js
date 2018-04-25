@@ -7,7 +7,7 @@ import HtmlWebpackExternalsPlugin from 'html-webpack-externals-plugin';
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: __dirname + 'dist/',
+        path: resolve(__dirname, 'dist/'), // if resolve is not used : __dirname + 'dist' , dist directory is not created by npm run prod, reports no errors and outputs no files.
         filename: 'app.bundle.js'
     },
     module:{
@@ -65,8 +65,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-          title: 'Development',
-          template: './src/index.html' // Normally creates a generic HTML for js file. But with template we can feed in our own HTML.
+          template: './src/index.html', // Normally creates a generic HTML for js file. But with template we can feed in our own HTML.
         }),
         new HtmlWebpackExternalsPlugin({
           externals: [
